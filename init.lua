@@ -6,3 +6,6 @@ require("merlin.config.mappings").load_keymaps()
 
 -- load plugins
 require("merlin.core.plugin-loader").load()
+
+-- load ui
+require("merlin.core.ui")
