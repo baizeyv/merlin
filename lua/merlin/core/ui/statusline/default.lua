@@ -36,6 +36,7 @@ local utils = require("merlin.core.ui.statusline.utils")
 -- STL_Lsp_Warning
 -- STL_Lsp_Hints
 -- STL_Lsp_Info
+-- STL_Empty_Space
 --
 
 local default_sep_icons = {

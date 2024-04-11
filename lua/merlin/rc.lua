@@ -2,6 +2,7 @@ local M = {}
 
 M.ui = {
     statusline = {
+        -- theme可选值: default, minimal
         theme = "default",
         -- sep_style 可用的值: default, arrow, block, round
         -- sep_style 还可以是 table: { left = "left_icon", right = "right_icon" }
