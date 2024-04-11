@@ -1,3 +1,6 @@
+vim.g.theme46_cache = vim.fn.stdpath "data" .. "/merlin/theme46/"
+print(vim.g.theme46_cache)
+
 -- load options
 require("merlin.config.options").load_options()
 

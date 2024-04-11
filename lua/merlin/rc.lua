@@ -17,6 +17,28 @@ M.ui = {
         -- {mode="mode content", file="file content", ......}
         -- 其中的 "mode content" 等类似位置的字符串可以换成一个方法,且返回字符串
         modules = nil
+    },
+    dashboard = {
+        load_on_startup = true,
+        header = {
+            "           ▄ ▄                   ",
+            "       ▄   ▄▄▄     ▄ ▄▄▄ ▄ ▄     ",
+            "       █ ▄ █▄█ ▄▄▄ █ █▄█ █ █     ",
+            "    ▄▄ █▄█▄▄▄█ █▄█▄█▄▄█▄▄█ █     ",
+            "  ▄ █▄▄█ ▄ ▄▄ ▄█ ▄▄▄▄▄▄▄▄▄▄▄▄▄▄  ",
+            "  █▄▄▄▄ ▄▄▄ █ ▄ ▄▄▄ ▄ ▄▄▄ ▄ ▄ █ ▄",
+            "▄ █ █▄█ █▄█ █ █ █▄█ █ █▄█ ▄▄▄ █ █",
+            "█▄█ ▄ █▄▄█▄▄█ █ ▄▄█ █ ▄ █ █▄█▄█ █",
+            "    █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█ █▄█▄▄▄█    ",
+        },
+        buttons = {
+            { "  Find File", "Spc f f", "Telescope find_files" },
+            { "󰈚  Recent Files", "Spc f o", "Telescope oldfiles" },
+            { "󰈭  Find Word", "Spc f w", "Telescope live_grep" },
+            { "  Bookmarks", "Spc m a", "Telescope marks" },
+            { "  Themes", "Spc t h", "Telescope themes" },
+            { "  Mappings", "Spc c h", "NvCheatsheet" },
+        }
     }
 }
 
