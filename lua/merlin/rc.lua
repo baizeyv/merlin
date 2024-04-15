@@ -1,6 +1,11 @@
 local M = {}
 
 M.ui = {
+    theme = "onedark",
+    transparency = true,
+    hl_override = {},
+    changed_themes = {},
+    theme_toggle = { "onedark", "one_light" },
     statusline = {
         -- theme可选值: default, minimal, vscode, color_vscode
         theme = "default",
@@ -39,6 +44,12 @@ M.ui = {
             { "  Themes", "Spc t h", "Telescope themes" },
             { "  Mappings", "Spc c h", "NvCheatsheet" },
         }
+    }
+}
+
+M.theme46 = {
+    integrations = {
+
     }
 }
 

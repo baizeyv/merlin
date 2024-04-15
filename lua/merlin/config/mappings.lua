@@ -39,7 +39,7 @@ M.keybinds = {
         ["h"] = { "e", { noremap = true, silent = true, nowait = true, desc = "" } },
         ["<leader>,."] = { "%", { noremap = true, silent = true, desc = "Match Symbol" } },
         ["<C-u>"] = { "5<C-y>", { noremap = true, silent = true, desc = "Scroll Up" } },
-        ["<C-e>"] = { "5<C-e>", { noremap = true, silent = true, desc = "Scroll Down" } }
+        ["<C-e>"] = { "5<C-e>", { noremap = true, silent = true, desc = "Scroll Down" } },
     },
     -- normal mode
     n = {

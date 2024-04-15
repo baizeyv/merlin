@@ -48,6 +48,7 @@ M.normal = {
     laststatus = 3,
     clipboard = "unnamedplus",
     ruler = false,
+	termguicolors = true
 }
 
 M.append = {
