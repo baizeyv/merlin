@@ -78,7 +78,9 @@ M.keybinds = {
         [">"] = { ">gv", { noremap = true, silent = true, nowait = true, desc = "indent right" } },
         ["<A-e>"] = { ":m .+1<cr>==", { silent = true, desc = "move current line to below" } },
         ["<A-u>"] = { ":m .-2<cr>==", { silent = true, desc = "move current line to above" } },
-        ["P"] = { '"_dP', { noremap = true, silent = true, desc = "paste" } }
+        ["P"] = { '"_dP', { noremap = true, silent = true, desc = "paste" } },
+        ["k"] = { "i", { noremap = true, silent = true, nowait = true, desc = "insert" } },
+        ["K"] = { "I", { noremap = true, silent = true, nowait = true, desc = "insert at begin of line" } },
     },
     i = {
 
@@ -91,7 +93,9 @@ M.keybinds = {
     },
     x = { -- visual block mode
         ["<A-e>"] = { ":move '>+1<cr>gv-gv", { silent = true, desc = "..." } },
-        ["<A-u>"] = { ":move '<-2<cr>gv-gv", { silent = true, desc = "..." } }
+        ["<A-u>"] = { ":move '<-2<cr>gv-gv", { silent = true, desc = "..." } },
+        ["k"] = { "i", { noremap = true, silent = true, nowait = true, desc = "insert" } },
+        ["K"] = { "I", { noremap = true, silent = true, nowait = true, desc = "insert at begin of line" } },
     },
     t = {
 

@@ -45,12 +45,12 @@ M.load = function ()
     end
     vim.opt.rtp:prepend(lazypath)
 
-    local lazy_config = require("merlin.config.lazy")
+    local lazy_config = require("std.config.lazy")
 
     load_lazy_keymap()
     
     require("lazy").setup({
-        { import = "merlin.plugins" }
+        { import = "std.plugins" }
     }, lazy_config)
 end
 
