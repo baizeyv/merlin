@@ -81,8 +81,6 @@ return {
         "lewis6991/gitsigns.nvim",
         event = "VeryLazy",
         opts = function()
-        end,
-        opts = function()
             return require('std.config.gitsigns')
         end,
         config = function(_, opts)

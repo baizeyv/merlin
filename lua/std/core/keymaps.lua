@@ -40,6 +40,7 @@ M.keybinds = {
         ["<leader>,."] = { "%", { noremap = true, silent = true, desc = "Match Symbol" } },
         ["<C-u>"] = { "5<C-y>", { noremap = true, silent = true, desc = "Scroll Up" } },
         ["<C-e>"] = { "5<C-e>", { noremap = true, silent = true, desc = "Scroll Down" } },
+        ["s"] = { "<nop>", {} }
     },
     -- normal mode
     n = {
@@ -102,6 +103,22 @@ M.keybinds = {
     }
 }
 
+M.telescope = {
+    n = {
+        ["ss"] = { "<cmd>Telescope find_files<cr>", { silent = true, desc = "Telescope Find Files" } },
+        ["sf"] = { "<cmd>Telescope live_grep<cr>", { silent = true, desc = "Telescope Live Grep" } },
+        ["s/"] = { "<cmd>Telescope current_buffer_fuzzy_find<CR>", { silent = true, desc = "Telescope Find In Current Buffer" } },
+        ["sm"] = { "<cmd>Telescope marks<CR>", { silent = true, desc = "Telescope Find Marks" } },
+        ["sb"] = { "<cmd>Telescope buffers<CR>", { silent = true, desc = "Telescope Find Buffers" } },
+        ["sh"] = { "<cmd>Telescope help_tags<CR>", { silent = true, desc = "Telescope Help Page" } },
+        ["s\\"] = { "<cmd>Telescope<cr>", { silent = true, desc = "Telescope Builtin" } },
+        ["sgh"] = { "<cmd>Telescope git_commits<CR>", { silent = true, desc = "Telescope Git Commits History" } },
+        ["sgs"] = { "<cmd>Telescope git_status<CR>", { silent = true, desc = "Telescope Git Status" } },
+        ["so"] = { "<cmd>Telescope oldfiles<CR>", { silent = true, desc = "Telescope Find Recently Opened FIles" } },
+    }
+}
+
+
 M.load_keymaps = function ()
     vim.schedule(function ()
         local function set_map(map_values)
@@ -116,6 +133,7 @@ M.load_keymaps = function ()
             end
         end
         set_map(M.keybinds)
+        set_map(M.telescope)
     end)
 end
 

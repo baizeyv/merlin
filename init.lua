@@ -1,3 +1,4 @@
+vim.g.mapleader = " "
 -- load options
 require("std.core.options").load_options()
 
