@@ -20,7 +20,7 @@ local M = {}
 -- c -> 命令行模式
 -- s -> 选择模式
 -- x -> 可视模式 visual block mode
--- o -> 操作符待定模式
+-- o -> 操作符待定模式 (textobjects)
 -- t -> 终端模式
 
 M.keybinds = {
@@ -100,6 +100,11 @@ M.keybinds = {
     },
     t = {
 
+    },
+    o = {
+        ["k"] = { "i", { noremap = true, silent = true, nowait = true, desc = "insert" } },
+        ["K"] = { "I", { noremap = true, silent = true, nowait = true, desc = "insert at begin of line" } },
+        ["i"] = { "<nop>", {} },
     }
 }
 
