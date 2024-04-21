@@ -82,7 +82,7 @@ local M = {
         map('n', '<leader>td', gitsigns.toggle_deleted)
 
         -- Text object
-        map({'o', 'x'}, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
+        map({'o', 'x'}, 'kh', ':<C-U>Gitsigns select_hunk<CR>')
     end
 }
 

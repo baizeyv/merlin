@@ -39,5 +39,25 @@ return {
             require("nvim-autopairs").setup(opts)
             opts.rule()
         end
+    },
+    {
+        "nat-418/boole.nvim",
+        event = "BufReadPre",
+        opts = function()
+            return require('std.config.boole')
+        end,
+        config = function(_, opts)
+            require('boole').setup(opts)
+        end
+    },
+    {
+        "ethanholz/nvim-lastplace",
+        event = "BufReadPre",
+        opts = function()
+            return require('std.config.lastplace')
+        end,
+        config = function(_, opts)
+            require('nvim-lastplace').setup(opts)
+        end
     }
 }
