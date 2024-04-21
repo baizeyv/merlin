@@ -123,6 +123,13 @@ M.telescope = {
     }
 }
 
+M.context = {
+    n = {
+        ["<leader>[]"] = { function()
+            require("treesitter-context").go_to_context(vim.v.count1)
+        end, { silent = true, desc = "go to the top of context" } }
+    }
+}
 
 M.load_keymaps = function ()
     vim.schedule(function ()
@@ -132,13 +139,14 @@ M.load_keymaps = function ()
                     for keybind, mapping_info in pairs(mode_values) do
                         local rhs = mapping_info[1]
                         local opt = mapping_info[2]
-                        vim.api.nvim_set_keymap(mode, keybind, rhs, opt)
+                        vim.keymap.set(mode, keybind, rhs, opt)
                     end
                 end
             end
         end
         set_map(M.keybinds)
         set_map(M.telescope)
+        set_map(M.context)
     end)
 end
 
